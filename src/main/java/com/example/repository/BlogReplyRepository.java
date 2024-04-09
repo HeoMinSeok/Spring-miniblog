@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface BlogReplyRepository extends JpaRepository<BlogReply, Long> {
     List<BlogReply> findByBlog_idx(Long idx);
+
+    Long countByBlog_idx(Long idx);
 }

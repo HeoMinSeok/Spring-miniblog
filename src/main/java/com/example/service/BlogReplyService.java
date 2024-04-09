@@ -44,4 +44,8 @@ public class BlogReplyService {
 
         blogReplyRepository.save(blogReply);
     }
+
+    public long countRepliesByIdx(long idx) {
+        return blogReplyRepository.countByBlog_idx(idx);
+    }
 }

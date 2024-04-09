@@ -45,4 +45,10 @@ public class BlogReplyController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("게시글 삭제에 실패했습니다.");
         }
     }
+
+    @GetMapping("/count/{idx}")
+    public ResponseEntity<Long> countRepliesByIdx(@PathVariable long idx) {
+        long repliesCount = blogReplyService.countRepliesByIdx(idx);
+        return ResponseEntity.ok(repliesCount);
+    }
 }

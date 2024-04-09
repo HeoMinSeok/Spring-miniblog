@@ -14,6 +14,8 @@ public class BlogReplyDTO {
     private Long rIdx;
     private String content;
     private Long idx;
+    
+    private long count = 0;
 
     public static BlogReplyDTO toDTO(BlogReply blogReply) {
         if (blogReply == null) {
